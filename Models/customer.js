@@ -34,14 +34,18 @@ const addCustomer = async () =>{
         name: "Rahul Kumar",
     });
 
-    let order1 = await order.findOne({item: "Chips"});
-    let order2 = await order.findOne({item: "Chocolate"});
+//     let order1 = await order.findOne({item: "Chips"});
+//     let order2 = await order.findOne({item: "Chocolate"});
 
-    cust1.orders.push(order1);
-    cust1.orders.push(order2);
+//     cust1.orders.push(order1);
+//     cust1.orders.push(order2);
 
-    let result = await cust1.save();
-    console.log(result);
+//     let result = await cust1.save();
+//     console.log(result);
+
+let result = await Customer.find({});
+console.log(result);
+
 };
 
 addCustomer();
