@@ -50,13 +50,13 @@ console.log(result);
 
 addCustomer();
 
-const addorders = async () =>{
-    let res = await order.insertMany([
-        {item: "Samosa", price: 12},
-        {item: "Chips", price: 10},
-        {item: "Chocolate", price: 40},
-    ]);
-    console.log(res);
-};
+// const addorders = async () =>{
+//     let res = await order.insertMany([
+//         {item: "Samosa", price: 12},
+//         {item: "Chips", price: 10},
+//         {item: "Chocolate", price: 40},
+//     ]);
+//     console.log(res);
+// };
 
-addorders();
+// addorders();
