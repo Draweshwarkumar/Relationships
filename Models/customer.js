@@ -60,3 +60,29 @@ addCustomer();
 // };
 
 // addorders();
+
+const addCust = async () =>{
+    let newCust = new Customer({
+        name: "Karan Arjun"
+    });
+
+    let newOrder = new order({
+        item: "Pizza",
+        price: 250
+    });
+
+    newCust.orders.push(newOrder);
+
+    await newOrder.save();
+    await newCust.save();
+
+    console.log("Added new customer successfully");
+};
+
+const delcust = async () =>{
+    let data = await Customer.findByIdAndDelete("66f1526c9b24c864be6ad7e8");
+    console.log(data);
+}
+
+// addCust();
+delcust();
